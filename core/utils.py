@@ -12,6 +12,7 @@ import re
 # Example tesseract_cmd = r'C:\Program Files (x86)\Tesseract-OCR\tesseract'
 
 # function to recognize license plate numbers using Tesseract OCR
+
 def recognize_plate(img, coords):
     # separate coordinates from box
     xmin, ymin, xmax, ymax = coords
@@ -77,14 +78,17 @@ def recognize_plate(img, coords):
             # clean tesseract text by removing any unwanted blank spaces
             clean_text = re.sub('[\W_]+', '', text)
             plate_num += clean_text
+            LC = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+            removing_table = str.maketrans('', '', ''.join(LC))
+            plate_num = plate_num.removing_table
         except: 
             text = None
     if plate_num != None:
         print("License Plate #: ", plate_num)
     #cv2.imshow("Character's Segmented", im2)
     #cv2.waitKey(0)
-    return plate_num
-
+    return plate_num 
+    
 def load_freeze_layer(model='yolov4', tiny=False):
     if tiny:
         if model == 'yolov3':
