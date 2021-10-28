@@ -80,7 +80,7 @@ def recognize_plate(img, coords):
             plate_num += clean_text
             LC = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
             removing_table = str.maketrans('', '', ''.join(LC))
-            plate_num = plate_num.removing_table
+            plate_num = plate_num.translate(removing_table)
         except: 
             text = None
     if plate_num != None:
