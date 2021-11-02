@@ -57,6 +57,9 @@ If you want to use yolov4-tiny.weights, a smaller model that is faster at runnin
 
 USE MY LICENSE PLATE TRAINED CUSTOM WEIGHTS: https://drive.google.com/file/d/1Xq5Rt1RaCR7-V6Glbll4FcRQiJS2XSYD/view?usp=sharing
 
+Drive folder for licence plate detection.. all files https://drive.google.com/drive/folders/1yZr-vGoRrz1wNLrtoNfTWcodpxAm9k8h?usp=sharing yolo datas are here
+images for tests : https://drive.google.com/drive/folders/13s-5splHKE-3iT_U-zHgNbbOXVNT6pTG?usp=sharing
+
 Copy and paste your custom .weights file into the 'data' folder and copy and paste your custom .names into the 'data/classes/' folder.
 
 The only change within the code you need to make in order for your custom model to work is on line 14 of 'core/config.py' file.
